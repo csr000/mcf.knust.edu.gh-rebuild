@@ -1383,6 +1383,7 @@ ul {
 
 .widget-recent-post ul li .media .media-left {
   margin-right: 15px;
+  width: 250px;
 }
 
 .widget-recent-post ul li .media .media-left img {
@@ -1390,8 +1391,7 @@ ul {
 }
 
 .widget-recent-post ul li .media .media-body .title {
-  margin-bottom: 10px;
-  font-size: 15px;
+  font-size: 24px;
 }
 
 .widget-recent-post ul li .media .media-body .post-info {
