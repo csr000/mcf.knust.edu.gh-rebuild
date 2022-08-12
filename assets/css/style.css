@@ -4870,6 +4870,9 @@ ul {
   border-radius: 7px;
 }
 
+.blog-details-page-content strong {
+  font-size: 25px;
+}
 /*********** tag-and-share ************/
 .tag-and-share {
   border-top: 1px solid #e9eaea;
