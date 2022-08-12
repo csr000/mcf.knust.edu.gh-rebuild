@@ -1112,7 +1112,6 @@ ul {
 
 .bg-gray {
   background: #f0f4f9;
- 
 }
 
 .bg-black {
@@ -4510,17 +4509,19 @@ ul {
   background: transparent;
   margin-bottom: 44px;
   border: 1px solid #cbd6e2;
+  width: 646px;
 }
 
 .course-details-nav-tab ul {
   margin: 0;
   padding: 0;
   border: 0 !important;
+  width: 646px;
 }
 
 .course-details-nav-tab ul li {
   margin-bottom: 0 !important;
-  width: 25%;
+  /* width: 25%; */
 }
 
 .course-details-nav-tab ul li a {
