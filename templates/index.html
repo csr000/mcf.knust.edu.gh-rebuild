@@ -17,12 +17,12 @@
           </h1>
           <a
             class="btn btn-base b-animate-3 mr-sm-3 mr-2"
-            href=" {% static 'contact.html' %} "
+            href=" {% url 'apply' %} "
             >Apply Now!</a
           >
           <a
             class="btn btn-border-black b-animate-3"
-            href=" {% static 'blog.html' %} "
+            href=" {% url 'register' %}  "
             >Read More</a
           >
         </div>
@@ -39,7 +39,8 @@
       <div class="row no-gutters">
         <div class="col-lg-4 text-lg-left text-center">
           <div class="intro-title">
-            <h6>ABOUT THE SCHOLARS PROGRAM</h6>
+            <h5 style="color: #fff">ABOUT THE SCHOLARS PROGRAM</h5>
+            <hr />
             <p>
               The Mastercard Foundation is an independent foundation based in
               Toronto, Canada. It is one of the largest private foundations in
@@ -117,6 +118,8 @@
                     transition to employment. It provides out-of-school,
                     unemployed young people with market-relevant skills,
                     connections to employers, and access to financial services.
+                    It aims to provide economically disadvantaged youth with
+                    access to high-quality, relevant higher education.
                   </p>
                 </div>
               </div>
@@ -151,9 +154,12 @@
                   What you need to know before you apply for the Scholarship
                   Program
                 </p>
-                <div class="btn-counter bg-base mt-3">
+                <a
+                  href="{% url 'register' %} "
+                  class="btn-counter bg-base mt-3"
+                >
                   <div class="right-val align-self-center">Read More</div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -190,11 +196,12 @@
     </div>
     <div class="row">
       <iframe
-        src="https://www.youtube.com/embed/3hlhI7nxT1U"
         width="1080"
-        height="315"
-        title="A YouTube video"
+        height="540"
+        src="https://www.youtube.com/embed/RdzDwn_w_w4"
+        title="YouTube video player"
         frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
       ></iframe>
     </div>
@@ -249,35 +256,10 @@
               src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Ms%20Afia%20Ampomah%20Awuah.jpg"
               alt="img"
             />
-            <div class="social-wrap">
-              <div class="social-wrap-inner">
-                <a class="social-share" href="#"
-                  ><i class="fa fa-share-alt"></i
-                ></a>
-                <ul>
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
           <div class="details">
-            <h4>
-              <a href=" {% static 'team-details.html' %} "
-                >Ms Afia Ampomah Awuah</a
-              >
-            </h4>
-            <span>Design Expert</span>
+            <h4><a href="#">Ms Afia Ampomah Awuah</a></h4>
+            <span>Program Manager</span>
           </div>
         </div>
       </div>
@@ -288,33 +270,10 @@
               src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-07/SAMUEL%20NASH.jpg"
               alt="img"
             />
-            <div class="social-wrap">
-              <div class="social-wrap-inner">
-                <a class="social-share" href="#"
-                  ><i class="fa fa-share-alt"></i
-                ></a>
-                <ul>
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
           <div class="details">
-            <h4>
-              <a href=" {% static 'team-details.html' %} ">Mr Samuel Nash</a>
-            </h4>
-            <span>Executive</span>
+            <h4><a href="#">Samuel Nash</a></h4>
+            <span>Recruitment/Operations</span>
           </div>
         </div>
       </div>
@@ -325,35 +284,10 @@
               src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Rev%20Fr%20Dr%20Stephen%20Jantuah.jpg"
               alt="img"
             />
-            <div class="social-wrap">
-              <div class="social-wrap-inner">
-                <a class="social-share" href="#"
-                  ><i class="fa fa-share-alt"></i
-                ></a>
-                <ul>
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
           <div class="details">
-            <h4>
-              <a href=" {% static 'team-details.html' %} "
-                >Rev Fr. Dr. Stephen Jantuah</a
-              >
-            </h4>
-            <span>Developer</span>
+            <h4><a href="#">Rev Fr Dr Stephen Jantuah</a></h4>
+            <span>Counselling</span>
           </div>
         </div>
       </div>
@@ -364,67 +298,234 @@
               src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-07/ISAAC%20MARFO%201.jpg"
               alt="img"
             />
-            <div class="social-wrap">
-              <div class="social-wrap-inner">
-                <a class="social-share" href="#"
-                  ><i class="fa fa-share-alt"></i
-                ></a>
-                <ul>
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
           </div>
           <div class="details">
-            <h4>
-              <a href=" {% static 'team-details.html' %} ">Isaac Marfo</a>
-            </h4>
-            <span>Marketing Expert</span>
+            <h4><a href="#">Isaac Marfo</a></h4>
+            <span>Communication and Branding</span>
           </div>
         </div>
       </div>
       <div class="item">
         <div class="single-team-inner">
           <div class="thumb">
-            <img src=" {% static 'assets/img/team/5.png' %} " alt="img" />
-            <div class="social-wrap">
-              <div class="social-wrap-inner">
-                <a class="social-share" href="#"
-                  ><i class="fa fa-share-alt"></i
-                ></a>
-                <ul>
-                  <li>
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-pinterest"></i></a>
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Daniel%20Quansah%20Bassaw.jpg"
+              alt="img"
+            />
           </div>
           <div class="details">
-            <h4>
-              <a href=" {% static 'team-details.html' %} ">Walson Jordan</a>
-            </h4>
-            <span>Ui/Ux Expert</span>
+            <h4><a href="#">Daniel Quansah Bassaw</a></h4>
+            <span>Accommodation, Travels & ICT Support</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2018-11/Claudia%20Owusu-Ansah.jpg"
+              alt="img"
+            />
+          </div>
+          <div class="details">
+            <h4><a href="#">None</a></h4>
+            <span>Scholars Support Services</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/MR%20Patrick%20Opoku%20Onyina_0.jpg"
+              alt="img"
+            />
+          </div>
+          <div class="details">
+            <h4><a href="#">Mr Patrick Opoku Onyina</a></h4>
+            <span>Community Engagement and Mentorship</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Oppong%20Kyekyeku%20Appiah.jpg"
+              alt="img"
+            />
+          </div>
+          <div class="details">
+            <h4><a href="#">Oppong Kyekyeku Appiah</a></h4>
+            <span>Monitoring and Evaluation</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Abigail%20Monney.jpg"
+              alt="img"
+            />
+          </div>
+          <div class="details">
+            <h4><a href="#">Abigail Monney</a></h4>
+            <span>Counselling</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Harriet%20Afriyie-Adjimi.jpg"
+              alt="img"
+            />
+          </div>
+          <div class="details">
+            <h4><a href="#">Harriet Afriyie-Adjimi</a></h4>
+            <span>Counselling</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Peter%20Kwabena%20Essien.jpg"
+              alt="img"
+            />
+          </div>
+          <div class="details">
+            <h4><a href="#">Peter Kwabena Essien</a></h4>
+            <span>Career Development</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Mathel%20Kwantwiwaa%20Adusei.jpg"
+              alt="img"
+            />
+          </div>
+          <div class="details">
+            <h4><a href="#">Mathel Kwantwiwaa Adusei</a></h4>
+            <span>Career Development</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Michael%20Kumah.jpg"
+              alt="img"
+            />
+          </div>
+          <div class="details">
+            <h4><a href="#">Michael Kumah</a></h4>
+            <span>Scholars Support Services</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Agbasah%20Michael.jpg"
+              alt="img"
+            />
+          </div>
+          <div class="details">
+            <h4><a href="#">Agbasah Michael</a></h4>
+            <span>Counselling</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Priscilla%20Kafui%20Asamoah.jpg"
+              alt="img"
+            />
+          </div>
+          <div class="details">
+            <h4><a href="#">Priscilla Kafui Asamoah</a></h4>
+            <span>Counselling</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Bernard%20Owusu%20Ansah%20Agyekum.jpg"
+              alt="img"
+            />
+          </div>
+          <div class="details">
+            <h4><a href="#">Bernard Owusu Ansah Agyekum</a></h4>
+            <span>Accommodation, Travels & ICT Support</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Ms%20Veronica%20Akyia%20Dochie.jpg"
+              alt="img"
+            />
+          </div>
+          <div class="details">
+            <h4><a href="#">Ms Veronica Akyiaa Dochie</a></h4>
+            <span>Communication and Branding</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Mr%20Fidelis%20N%20K%20Yiryuo.jpg"
+              alt="img"
+            />
+          </div>
+          <div class="details">
+            <h4><a href="#">Mr Fidelis N. K. Yiryuo</a></h4>
+            <span>Recruitment</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Bright%20Asante.jpg"
+              alt="img"
+            />
+          </div>
+          <div class="details">
+            <h4><a href="#">Bright Asante</a></h4>
+            <span>Data Analyst</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Shadrach%20Korsah.jpg"
+              alt="img"
+            />
+          </div>
+          <div class="details">
+            <h4><a href="#">Shadrach Korsah</a></h4>
+            <span>Alumni Coordinator</span>
           </div>
         </div>
       </div>

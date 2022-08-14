@@ -5,6 +5,10 @@ def index(request):
     return render(request, 'index.html')
 
 
+def apply(request):
+    return render(request, 'apply.html')
+
+
 def about(request):
     return render(request, 'about.html')
 
@@ -15,6 +19,7 @@ def register(request):
 
 def staff(request):
     return render(request, 'staff.html')
+
 
 def event(request):
     return render(request, 'event.html')
@@ -34,6 +39,7 @@ def publications(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
 
 def cohort(request, id):
     match id:

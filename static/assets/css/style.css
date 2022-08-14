@@ -113,6 +113,14 @@ h6 {
   line-height: 1.3830952381;
 }
 
+hr {
+  margin: 0;
+  height: 1px;
+  width: 100px;
+  background-color: #ccc;
+  border: none;
+}
+
 h1,
 h2,
 h3,
@@ -3102,7 +3110,7 @@ ul {
   padding: 30px;
 }
 
-.intro-title h6 {
+.intro-title h5 {
   color: #fff;
 }
 
@@ -3599,7 +3607,7 @@ ul {
   border-radius: 7px;
   position: relative;
   margin-top: 40px;
-  background-image: url('../img/other/2.png')
+  background-image: url("../img/other/2.png");
 }
 
 .testimonial-area-inner .testimonial-right-img {
@@ -4230,7 +4238,7 @@ ul {
 
 /********** contact-list-inner ************/
 .contact-area {
-  background-image: url('../img/banner/2.png')
+  background-image: url("../img/banner/2.png");
 }
 .contact-list-inner {
   background: #f0f4f9;

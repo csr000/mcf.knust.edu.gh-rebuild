@@ -21,6 +21,7 @@ from app import views
 
 urlpatterns = [
     path('', views.index, name='index'),
+    path('apply/', views.apply, name='apply'),
     path('about/', views.about, name='about'),
     path('register/', views.register, name='register'),
     path('staff/', views.staff, name='staff'),
