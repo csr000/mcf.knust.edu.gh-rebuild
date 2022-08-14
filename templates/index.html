@@ -1,682 +1,679 @@
-<!DOCTYPE html>
-<html lang="zxx">
+{% extends 'base.html' %} {% block content %} {% load static %}
 
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mastercard Foundation, KNUST</title>
-    <link rel=icon href=" {% static 'assets/img/favicon.png' %} " sizes="20x20" type="image/png">
-
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href=" {% static 'assets/css/vendor.css' %} ">
-    <link rel="stylesheet" href=" {% static 'assets/css/style.css' %} ">
-    <link rel="stylesheet" href=" {% static 'assets/css/responsive.css' %} ">
-
-</head>
-
-<body>
-
-    <!-- preloader area start -->
-    <div class="preloader" id="preloader">
-        <div class="preloader-inner">
-            <div class="spinner">
-                <div class="dot1"></div>
-                <div class="dot2"></div>
-            </div>
+<!-- banner start -->
+<div class="banner-area banner-area-1 bg-gray">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-lg-5 col-md-8 order-lg-12 align-self-center">
+        <div class="thumb b-animate-thumb">
+          <img src=" {% static 'assets/img/banner/1.png' %} " alt="img" />
         </div>
-    </div>
-    <!-- preloader area end -->
-
-    <!-- search popup start-->
-    <div class="td-search-popup" id="td-search-popup">
-        <form action="index.html" class="search-form">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search.....">
-            </div>
-            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
-        </form>
-    </div>
-    <!-- search popup end-->
-    <div class="body-overlay" id="body-overlay"></div>
-
-    <!-- navbar start -->
-    <div class="navbar-area">
-
-        <nav class="navbar navbar-area-1 navbar-area navbar-expand-lg">
-            <div class="container nav-container">
-                <div class="responsive-mobile-menu">
-                    <button class="menu toggle-btn d-block d-lg-none" data-target="#edumint_main_menu"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-left"></span>
-                        <span class="icon-right"></span>
-                    </button>
-                </div>
-                <div class="logo">
-                    <a href=" {% static 'index.html' %} "><img
-                            src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/inline-images/MCFSP-AT-KNUST-LOGO_0.png"
-                            alt="img"></a>
-                </div>
-                <div class="nav-right-part nav-right-part-mobile">
-                    <a class="signin-btn" href=" {% static 'signin.html' %} ">Sign In</a>
-                    <a class="btn btn-base" href=" {% static 'signup.html' %} "></a>
-                    <a class="search-bar" href="#"><i class="fa fa-search"></i></a>
-                </div>
-                <div class="collapse navbar-collapse" id="edumint_main_menu">
-                    <ul class="navbar-nav menu-open">
-                        <li class="current-menu-item">
-                            <a href="#">Home</a>
-
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#">About Us</a>
-                            <ul class="sub-menu">
-                                <li><a href=" {% static 'course.html' %} ">History</a></li>
-                                <li><a href=" {% static 'course-details.html' %} ">Vision & Mission of MCF</a></li>
-                                <li><a href=" {% static 'course-details.html' %} ">Vision, Mission & Core Values of KNUST</a></li>
-                                <li><a href=" {% static 'course-details.html' %} ">Counselling Unit</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="menu-item-has-children">
-                            <a href="#">Scholars</a>
-                            <ul class="sub-menu">
-                                <li><a href=" {% static 'blog.html' %} ">COHORT ONE</a></li>
-                                <li><a href=" {% static 'blog.html' %} ">COHORT TWO</a></li>
-                                <li><a href=" {% static 'blog.html' %} ">COHORT THREE</a></li>
-                                <li><a href=" {% static 'blog.html' %} ">COHORT FOUR</a></li>
-                                <li><a href=" {% static 'blog.html' %} ">COHORT FIVE</a></li>
-             
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#">More</a>
-                            <ul class="sub-menu">
-                                <li><a href=" {% static 'register.html' %} ">Register</a></li>
-                                <li><a href=" {% static 'staff.html' %} ">Staff</a></li>
-                                <li><a href=" {% static 'event.html' %} ">Events</a></li>
-                                <li><a href=" {% static 'news.html' %} ">News</a></li>
-                                <li><a href=" {% static 'announcements.html' %} ">Announcement</a></li>
-                                <li><a href=" {% static 'publications.html' %} ">publications</a></li>
-                                <li><a href=" {% static 'contact.html' %} ">Contact Us</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="nav-right-part nav-right-part-desktop">
-                    <!-- <a class="signin-btn" href=" {% static 'signin.html' %} ">Sign In</a> -->
-                    <a class="btn btn-base" href=" {% static 'signup.html' %} ">Apply for Scholarship</a>
-                    <a class="search-bar" href="#"><i class="fa fa-search"></i></a>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <!-- navbar end -->
-
-    <!-- banner start -->
-    <div class="banner-area banner-area-1 bg-gray">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-5 col-md-8 order-lg-12 align-self-center">
-                    <div class="thumb b-animate-thumb">
-                        <img src=" {% static 'assets/img/banner/1.png' %} " alt="img">
-                    </div>
-                </div>
-                <div class="col-lg-7 order-lg-1 align-self-center">
-                    <div class="banner-inner text-center text-lg-left mt-5 mt-lg-0">
-                        <h6 class="b-animate-1 sub-title">Raising the next Generation</h6>
-                        <h1 class="b-animate-2 title">Mastercard Foundation Scholarship 2022</h1>
-                        <a class="btn btn-base b-animate-3 mr-sm-3 mr-2" href=" {% static 'contact.html' %} ">Apply Now!</a>
-                        <a class="btn btn-border-black b-animate-3" href=" {% static 'blog.html' %} ">Read More</a>
-                    </div>
-                </div>
-            </div>
+      </div>
+      <div class="col-lg-7 order-lg-1 align-self-center">
+        <div class="banner-inner text-center text-lg-left mt-5 mt-lg-0">
+          <h6 class="b-animate-1 sub-title">Raising the next Generation</h6>
+          <h1 class="b-animate-2 title">
+            Mastercard Foundation Scholarship 2022
+          </h1>
+          <a
+            class="btn btn-base b-animate-3 mr-sm-3 mr-2"
+            href=" {% static 'contact.html' %} "
+            >Apply Now!</a
+          >
+          <a
+            class="btn btn-border-black b-animate-3"
+            href=" {% static 'blog.html' %} "
+            >Read More</a
+          >
         </div>
+      </div>
     </div>
-    <!-- banner end -->
+  </div>
+</div>
+<!-- banner end -->
 
-    <!-- intro area start -->
-    <div class="intro-area intro-area--top">
-        <div class="container">
-            <div class="intro-area-inner bg-black">
-                <div class="row no-gutters">
-                    <div class="col-lg-4 text-lg-left text-center">
-                        <div class="intro-title">
-                            <h6>ABOUT THE SCHOLARS PROGRAM </h6>
-                            <p>The Mastercard Foundation is an independent foundation based in Toronto, Canada. It is
-                                one of the largest private foundations in the world. Through its work with partner
-                                organizations, it provides greater access to education, skills training and financial
-                                services for people living in poverty, primarily in Sub-Saharan Africa.
-
-                                The Foundation was established as an independent entity in 2006 by MasterCard Worldwide
-                                when it became a public company. No company executives serve on the Foundation’s Board
-                                of Directors. All decisions are determined by the Foundation’s Board of Directors and
-                                President and CEO. <br>Read More</p>
-                            <!-- <ul>
+<!-- intro area start -->
+<div class="intro-area intro-area--top">
+  <div class="container">
+    <div class="intro-area-inner bg-black">
+      <div class="row no-gutters">
+        <div class="col-lg-4 text-lg-left text-center">
+          <div class="intro-title">
+            <h6>ABOUT THE SCHOLARS PROGRAM</h6>
+            <p>
+              The Mastercard Foundation is an independent foundation based in
+              Toronto, Canada. It is one of the largest private foundations in
+              the world. Through its work with partner organizations, it
+              provides greater access to education, skills training and
+              financial services for people living in poverty, primarily in
+              Sub-Saharan Africa. The Foundation was established as an
+              independent entity in 2006 by MasterCard Worldwide when it became
+              a public company. No company executives serve on the Foundation’s
+              Board of Directors. All decisions are determined by the
+              Foundation’s Board of Directors and President and CEO. <br />Read
+              More
+            </p>
+            <!-- <ul>
                                 <li><i class="fa fa-check"></i> Nullam est </li>
                                 <li><i class="fa fa-check"></i> Mattis dictum nunc </li>
                             </ul> -->
-                        </div>
-                    </div>
-                    <div class="col-lg-8 align-self-center">
-                        <ul class="row no-gutters">
-                            <li class="col-md-4">
-                                <div class="single-intro-inner style-white text-center">
-                                    <div class="thumb">
-                                        <img src=" {% static 'assets/img/intro/1.png' %} " alt="img">
-                                    </div>
-                                    <div class="details">
-                                        <h5>Give-Back Component</h5>
-                                        <p>An integral component of the Program is the commitment from the Scholars to
-                                            give back to their communities and countries of origin. Students demonstrate
-                                            this commitment through volunteerism and community service, as well as other
-                                            forms of experiential learning.</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-md-4">
-                                <div class="single-intro-inner style-white text-center">
-                                    <div class="thumb">
-                                        <img src=" {% static 'assets/img/intro/2.png' %} " alt="img">
-                                    </div>
-                                    <div class="details">
-                                        <h5>Education and Learning</h5>
-                                        <p>The goal of the Education and Learning Program is to enable access to
-                                            quality, relevant tertiary education for economically disadvantaged youth
-                                            and to develop next-generation leaders who will support social and economic
-                                            transformation in their communities, Ghana, Africa and the world at large.
-                                        </p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="col-md-4">
-                                <div class="single-intro-inner style-white text-center">
-                                    <div class="thumb">
-                                        <img src=" {% static 'assets/img/intro/3.png' %} " alt="img">
-                                    </div>
-                                    <div class="details">
-                                        <h5>Youth Livelihoods</h5>
-                                        <p>The goal of this program is to enable young people to transition to
-                                            employment. It provides out-of-school, unemployed young people with
-                                            market-relevant skills, connections to employers, and access to financial
-                                            services.</p>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
-    </div>
-    <!-- intro area end -->
-
-    <!-- about area start -->
-    <div class="about-area pd-top-140">
-        <div class="container">
-            <div class="about-area-inner">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <div class="about-thumb-wrap left-icon"
-                            style="background-image: url('https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/inline-images/scholarimg.jpg');">
-                            <div class="about-icon"><img src=" {% static 'assets/img/icon/4.png' %} " alt="img"></div>
-                            <div class="bottom-content">
-                                <div class="section-title mb-0">
-                                    <h5 class="title">ELIGIBILITY</h5>
-                                    <p class="content">What you need to know before you apply for the Scholarship
-                                        Program
-                                    </p>
-                                    <div class="btn-counter bg-base mt-3">
-                                        <div class="right-val align-self-center">
-                                            Read More
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <div class="about-inner-wrap pl-xl-4 pt-5 pt-lg-0 mt-5 mt-lg-0">
-                            <div class="section-title mb-0">
-                                <h6 class="sub-title right-line">ABOUT US</h6>
-                                <h2 class="title">OUR SCHOLARS</h2>
-                                <p class="content">Students selected for The Mastercard Foundation Scholars Program are
-                                    provided with opportunities to realise their full potential. Through Foundation
-                                    partners, they receive holistic financial, academic, and emotional support as they
-                                    transition from secondary to university education and into the workforce.</p>
-
-                            </div>
-                        </div>
-                    </div>
+        <div class="col-lg-8 align-self-center">
+          <ul class="row no-gutters">
+            <li class="col-md-4">
+              <div class="single-intro-inner style-white text-center">
+                <div class="thumb">
+                  <img
+                    src=" {% static 'assets/img/intro/1.png' %} "
+                    alt="img"
+                  />
                 </div>
-            </div>
+                <div class="details">
+                  <h5>Give-Back Component</h5>
+                  <p>
+                    An integral component of the Program is the commitment from
+                    the Scholars to give back to their communities and countries
+                    of origin. Students demonstrate this commitment through
+                    volunteerism and community service, as well as other forms
+                    of experiential learning.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="col-md-4">
+              <div class="single-intro-inner style-white text-center">
+                <div class="thumb">
+                  <img
+                    src=" {% static 'assets/img/intro/2.png' %} "
+                    alt="img"
+                  />
+                </div>
+                <div class="details">
+                  <h5>Education and Learning</h5>
+                  <p>
+                    The goal of the Education and Learning Program is to enable
+                    access to quality, relevant tertiary education for
+                    economically disadvantaged youth and to develop
+                    next-generation leaders who will support social and economic
+                    transformation in their communities, Ghana, Africa and the
+                    world at large.
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="col-md-4">
+              <div class="single-intro-inner style-white text-center">
+                <div class="thumb">
+                  <img
+                    src=" {% static 'assets/img/intro/3.png' %} "
+                    alt="img"
+                  />
+                </div>
+                <div class="details">
+                  <h5>Youth Livelihoods</h5>
+                  <p>
+                    The goal of this program is to enable young people to
+                    transition to employment. It provides out-of-school,
+                    unemployed young people with market-relevant skills,
+                    connections to employers, and access to financial services.
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
-    <!-- work area start -->
-    <div class="work-area pd-top-110">
-        <div class="container">
-            <div class="section-title">
-                <div class="row">
-                    <div class="col-lg-6 align-self-center">
-                        <h6 class="sub-title right-line">What we do</h6>
-                        <h2 class="title">How it works?</h2>
-                    </div>
+  </div>
+</div>
+<!-- intro area end -->
 
+<!-- about area start -->
+<div class="about-area pd-top-140">
+  <div class="container">
+    <div class="about-area-inner">
+      <div class="row">
+        <div class="col-lg-6">
+          <div
+            class="about-thumb-wrap left-icon"
+            style="
+              background-image: url('https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/inline-images/scholarimg.jpg');
+            "
+          >
+            <div class="about-icon">
+              <img src=" {% static 'assets/img/icon/4.png' %} " alt="img" />
+            </div>
+            <div class="bottom-content">
+              <div class="section-title mb-0">
+                <h5 class="title">ELIGIBILITY</h5>
+                <p class="content">
+                  What you need to know before you apply for the Scholarship
+                  Program
+                </p>
+                <div class="btn-counter bg-base mt-3">
+                  <div class="right-val align-self-center">Read More</div>
                 </div>
+              </div>
             </div>
-            <div class="row">
-                <iframe src="https://www.youtube.com/embed/3hlhI7nxT1U" width="1080" height="315"
-                    title="A YouTube video" frameborder="0" allowfullscreen></iframe>
-            </div>
+          </div>
         </div>
-    </div>
-    <!-- work area end -->
-
-    <!-- testimonial area start -->
-    <div class="testimonial-area pd-top-100">
-        <div class="container">
-            <div class="testimonial-area-inner bg-cover" style="background-image: url(' {% static 'assets/img/other/2.png' %} ');">
-                <!-- <img class="testimonial-right-img" src=" {% static 'assets/img/other/3.png' %} " alt="img"> -->
-
-                <div class="item">
-                    <div class="single-testimonial-inner style-white">
-                        <span class="testimonial-quote"><i class="fa fa-quote-left"></i></span>
-                        <h3 style="color:#fff">Announcement</h3>
-                        <p class="mb-4">Eugene The Mastercard Foundation Scholars Program at KNUST invites applications
-                            from Scholars and Scholar Alumni within the Scholars Program at KNUST for support from the
-                            Scholars Entrepreneurship Fund (SEF).
-                        </p>
-                    </div>
-                </div>
-
-
+        <div class="col-lg-6">
+          <div class="about-inner-wrap pl-xl-4 pt-5 pt-lg-0 mt-5 mt-lg-0">
+            <div class="section-title mb-0">
+              <h6 class="sub-title right-line">ABOUT US</h6>
+              <h2 class="title">OUR SCHOLARS</h2>
+              <p class="content">
+                Students selected for The Mastercard Foundation Scholars Program
+                are provided with opportunities to realise their full potential.
+                Through Foundation partners, they receive holistic financial,
+                academic, and emotional support as they transition from
+                secondary to university education and into the workforce.
+              </p>
             </div>
+          </div>
         </div>
+      </div>
     </div>
-    <!-- testimonial area end -->
-
-    <!-- team area start -->
-    <div class="team-area pd-top-110">
-        <div class="container-fluid pl-4 pr-4">
-            <div class="row justify-content-center">
-                <div class="col-xl-6 col-lg-7">
-                    <div class="section-title text-center">
-                        <h6 class="sub-title double-line">Meet Our Team</h6>
-                        <h2 class="title">Our Creative Team</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="team-slider owl-carousel">
-                <div class="item">
-                    <div class="single-team-inner">
-                        <div class="thumb">
-                            <img src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Ms%20Afia%20Ampomah%20Awuah.jpg"
-                                alt="img">
-                            <div class="social-wrap">
-                                <div class="social-wrap-inner">
-                                    <a class="social-share" href="#"><i class="fa fa-share-alt"></i></a>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <h4><a href=" {% static 'team-details.html' %} ">Ms Afia Ampomah Awuah</a></h4>
-                            <span>Design Expert</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="single-team-inner">
-                        <div class="thumb">
-                            <img src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-07/SAMUEL%20NASH.jpg"
-                                alt="img">
-                            <div class="social-wrap">
-                                <div class="social-wrap-inner">
-                                    <a class="social-share" href="#"><i class="fa fa-share-alt"></i></a>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <h4><a href=" {% static 'team-details.html' %} ">Mr Samuel Nash</a></h4>
-                            <span>Executive</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="single-team-inner">
-                        <div class="thumb">
-                            <img src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Rev%20Fr%20Dr%20Stephen%20Jantuah.jpg"
-                                alt="img">
-                            <div class="social-wrap">
-                                <div class="social-wrap-inner">
-                                    <a class="social-share" href="#"><i class="fa fa-share-alt"></i></a>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <h4><a href=" {% static 'team-details.html' %} ">Rev Fr. Dr. Stephen Jantuah</a></h4>
-                            <span>Developer</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="single-team-inner">
-                        <div class="thumb">
-                            <img src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-07/ISAAC%20MARFO%201.jpg"
-                                alt="img">
-                            <div class="social-wrap">
-                                <div class="social-wrap-inner">
-                                    <a class="social-share" href="#"><i class="fa fa-share-alt"></i></a>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <h4><a href=" {% static 'team-details.html' %} ">Isaac Marfo</a></h4>
-                            <span>Marketing Expert</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="item">
-                    <div class="single-team-inner">
-                        <div class="thumb">
-                            <img src=" {% static 'assets/img/team/5.png' %} " alt="img">
-                            <div class="social-wrap">
-                                <div class="social-wrap-inner">
-                                    <a class="social-share" href="#"><i class="fa fa-share-alt"></i></a>
-                                    <ul>
-                                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="details">
-                            <h4><a href=" {% static 'team-details.html' %} ">Walson Jordan</a></h4>
-                            <span>Ui/Ux Expert</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  </div>
+</div>
+<!-- work area start -->
+<div class="work-area pd-top-110">
+  <div class="container">
+    <div class="section-title">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <h6 class="sub-title right-line">What we do</h6>
+          <h2 class="title">How it works?</h2>
         </div>
+      </div>
     </div>
-    <!-- team area end -->
+    <div class="row">
+      <iframe
+        src="https://www.youtube.com/embed/3hlhI7nxT1U"
+        width="1080"
+        height="315"
+        title="A YouTube video"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </div>
+</div>
+<!-- work area end -->
 
-    <!--blog-area start-->
-    <div class="blog-area pd-top-80 pd-bottom-90">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-xl-6 col-lg-7">
-                    <div class="section-title text-center">
-                        <h6 class="sub-title double-line">Latest News</h6>
-                        <h2 class="title">Our Insights & Articles</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4">
-                    <ul class="single-blog-list-wrap mb-5 mb-lg-0">
-                        <li>
-                            <div class="media single-blog-list-inner">
-                                <div class="media-left date">
-                                    <span>JAN</span>
-                                    20
-                                </div>
-                                <div class="media-body details">
-                                    <ul class="blog-meta">
-                                        <li><i class="fa fa-user"></i> BY ADMIN</li>
-                                        <li><i class="fa fa-folder-open-o"></i> News</li>
-                                    </ul>
-                                    <h5><a href=" {% static 'blog-details.html' %} ">MCFSP at KNUST has Presented Assistive Devices to
-                                            Scholars with Impairment</a></h5>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="media single-blog-list-inner">
-                                <div class="media-left date">
-                                    <span>FEB</span>
-                                    26
-                                </div>
-                                <div class="media-body details">
-                                    <ul class="blog-meta">
-                                        <li><i class="fa fa-user"></i> BY ADMIN</li>
-                                        <li><i class="fa fa-folder-open-o"></i> News</li>
-                                    </ul>
-                                    <h5><a href=" {% static 'blog-details.html' %} ">Health Screening Programme for Mastercard Foundation
-                                            Scholars at KNUST Organised</a></h5>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="media single-blog-list-inner">
-                                <div class="media-left date">
-                                    <span>JAN</span>
-                                    28
-                                </div>
-                                <div class="media-body details">
-                                    <ul class="blog-meta">
-                                        <li><i class="fa fa-user"></i> BY ADMIN</li>
-                                        <li><i class="fa fa-folder-open-o"></i> News</li>
-                                    </ul>
-                                    <h5><a href=" {% static 'blog-details.html' %} ">Mastercard Foundation Scholars Commission a Six (6)
-                                            Unit Classroom Block at Agona Wiamoase </a></h5>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-lg-8">
-                    <div class="row justify-content-center">
-                        <div class="col-md-6">
-                            <div class="single-blog-inner">
-                                <div class="thumb">
-                                    <img src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2022-02/Mentors%20and%20Mentees%20Welcome%20Program.jpg"
-                                        alt="img">
-                                    <span class="date">28 JANUARY, 2022</span>
-                                </div>
-                                <div class="details">
-                                    <ul class="blog-meta">
-                                        <li><i class="fa fa-user"></i> BY ADMIN</li>
-                                        <li><i class="fa fa-folder-open-o"></i> News</li>
-                                    </ul>
-                                    <h5><a href=" {% static 'blog-details.html' %} ">WiSTEM-KNUST/MCFSP at KNUST Holds Mentors and
-                                            Mentees Welcome Programme</a>
-                                    </h5>
-                                    <a class="read-more-text" href=" {% static 'blog-details.html' %} ">READ MORE <i
-                                            class="fa fa-angle-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="single-blog-inner">
-                                <div class="thumb">
-                                    <img src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-09/MCFSP%20at%20KNUST%20Equips%20Scholars%20with%20Hands-On%20Skills%20for%20the%20World%20of%20Work.jpg"
-                                        alt="img">
-                                    <span class="date">30 JANUARY, 2022</span>
-                                </div>
-                                <div class="details">
-                                    <ul class="blog-meta">
-                                        <li><i class="fa fa-user"></i> BY ADMIN</li>
-                                        <li><i class="fa fa-folder-open-o"></i> News</li>
-                                    </ul>
-                                    <h5><a href=" {% static 'blog-details.html' %} ">MCFSP at KNUST Equips Scholars with Hands-On Skills
-                                            for the World of Work</a></h5>
-                                    <a class="read-more-text" href=" {% static 'blog-details.html' %} ">READ MORE <i
-                                            class="fa fa-angle-right"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- testimonial area start -->
+<div class="testimonial-area pd-top-100">
+  <div class="container">
+    <div
+      class="testimonial-area-inner bg-cover"
+      style="background-image: url(' {% static 'assets/img/other/2.png' %} ')"
+    >
+      <!-- <img class="testimonial-right-img" src=" {% static 'assets/img/other/3.png' %} " alt="img"> -->
+
+      <div class="item">
+        <div class="single-testimonial-inner style-white">
+          <span class="testimonial-quote"
+            ><i class="fa fa-quote-left"></i
+          ></span>
+          <h3 style="color: #fff">Announcement</h3>
+          <p class="mb-4">
+            Eugene The Mastercard Foundation Scholars Program at KNUST invites
+            applications from Scholars and Scholar Alumni within the Scholars
+            Program at KNUST for support from the Scholars Entrepreneurship Fund
+            (SEF).
+          </p>
         </div>
+      </div>
     </div>
-    <!--blog-area end-->
+  </div>
+</div>
+<!-- testimonial area end -->
 
-    <!--contact-area start-->
-    <div class="contact-area bg-overlay mt-200 pd-bottom-90" style="background-image: url(' {% static 'assets/img/banner/2.png' %} ');">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8">
-                    <form class="contact-form-inner mt-mn-200 style-shadow">
-                        <div class="section-title">
-                            <h2 class="title">Contact Us</h2>
-                            <p>We will be happy to answer your questions.</p>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="single-input-inner">
-                                    <input type="text" placeholder="Full name">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single-input-inner">
-                                    <input type="text" placeholder="Phone Number">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single-input-inner">
-                                    <input type="text" placeholder="Email Address">
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="single-input-inner">
-                                    <input type="text" placeholder="Subject">
-                                </div>
-                            </div>
-                            <div class="col-12">
-                                <div class="single-input-inner">
-                                    <textarea placeholder="Your Message"></textarea>
-                                </div>
-                            </div>
-                            <div class="col-sm-6 align-self-center">
-                                <div class="single-input-inner style-checkbox">
-
-                                </div>
-                            </div>
-                            <div class="col-sm-6 text-sm-right">
-                                <a class="btn btn-base" href="#">Send Message</a>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                <div class="col-lg-4 align-self-end">
-                    <div class="mt-5 mt-lg-0">
-                        <ul class="single-list-wrap">
-                            <li class="single-list-inner style-white style-check-box-grid-2">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src=" {% static 'assets/img/icon/16.png' %} " alt="img">
-                                    </div>
-                                    <div class="media-body align-self-center">
-                                        <h5>Our Address</h5>
-                                        <p>J. Harper Centre Commercial Area </p>
-                                        <p>KNUST</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-list-inner style-white style-check-box-grid-2">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src=" {% static 'assets/img/icon/17.png' %} " alt="img">
-                                    </div>
-                                    <div class="media-body align-self-center">
-                                        <h5>Our Phone</h5>
-                                        <p>+233 3223 98766</p>
-                                        <p>+233 206 030 790</p>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="single-list-inner style-white style-check-box-grid-2">
-                                <div class="media">
-                                    <div class="media-left">
-                                        <img src=" {% static 'assets/img/icon/18.png' %} " alt="img">
-                                    </div>
-                                    <div class="media-body align-self-center">
-                                        <h5>Our Email</h5>
-                                        <p>mcfsecretariat@knust.edu.gh</p>
-
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+<!-- team area start -->
+<div class="team-area pd-top-110">
+  <div class="container-fluid pl-4 pr-4">
+    <div class="row justify-content-center">
+      <div class="col-xl-6 col-lg-7">
+        <div class="section-title text-center">
+          <h6 class="sub-title double-line">Meet Our Team</h6>
+          <h2 class="title">Our Creative Team</h2>
         </div>
+      </div>
     </div>
-    <!--contact-area end-->
-
-    <!-- footer area start -->
-    <footer class="footer-area bg-gray">
-
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 align-self-center">
-                        <a href=" {% static 'index.html' %} "><img
-                                src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/inline-images/MCFSP-AT-KNUST-LOGO_0.png"
-                                class="footer-logo" alt="img"></a>
-                    </div>
-                    <div class="col-lg-4  col-md-6 order-lg-12 text-md-right align-self-center">
-                        <ul class="social-media mt-md-0 mt-3">
-                            <li><a class="facebook" href="https://www.facebook.com/mcfspatknust"><i
-                                        class="fa fa-facebook"></i></a></li>
-                            <li><a class="twitter" href="https://twitter.com/mcfspatknust"><i
-                                        class="fa fa-twitter"></i></a></li>
-                            <li><a class="instagram" href="https://www.instagram.com/mcfspatknust/"><i
-                                        class="fa fa-instagram"></i></a></li>
-                            <li><a class="youtube" href="https://youtube.com/channel/UCK2hx6d86sS56_ItMiTt2QA"><i
-                                        class="fa fa-youtube"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4 order-lg-8 text-lg-center align-self-center mt-lg-0 mt-3">
-                        <p>copyright 2022 by Richard Stephen</p>
-                    </div>
-                </div>
+    <div class="team-slider owl-carousel">
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Ms%20Afia%20Ampomah%20Awuah.jpg"
+              alt="img"
+            />
+            <div class="social-wrap">
+              <div class="social-wrap-inner">
+                <a class="social-share" href="#"
+                  ><i class="fa fa-share-alt"></i
+                ></a>
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                  </li>
+                </ul>
+              </div>
             </div>
+          </div>
+          <div class="details">
+            <h4>
+              <a href=" {% static 'team-details.html' %} "
+                >Ms Afia Ampomah Awuah</a
+              >
+            </h4>
+            <span>Design Expert</span>
+          </div>
         </div>
-    </footer>
-    <!-- footer area end -->
-
-    <!-- back to top area start -->
-    <div class="back-to-top">
-        <span class="back-top"><i class="fa fa-angle-up"></i></span>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-07/SAMUEL%20NASH.jpg"
+              alt="img"
+            />
+            <div class="social-wrap">
+              <div class="social-wrap-inner">
+                <a class="social-share" href="#"
+                  ><i class="fa fa-share-alt"></i
+                ></a>
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="details">
+            <h4>
+              <a href=" {% static 'team-details.html' %} ">Mr Samuel Nash</a>
+            </h4>
+            <span>Executive</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Rev%20Fr%20Dr%20Stephen%20Jantuah.jpg"
+              alt="img"
+            />
+            <div class="social-wrap">
+              <div class="social-wrap-inner">
+                <a class="social-share" href="#"
+                  ><i class="fa fa-share-alt"></i
+                ></a>
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="details">
+            <h4>
+              <a href=" {% static 'team-details.html' %} "
+                >Rev Fr. Dr. Stephen Jantuah</a
+              >
+            </h4>
+            <span>Developer</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img
+              src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-07/ISAAC%20MARFO%201.jpg"
+              alt="img"
+            />
+            <div class="social-wrap">
+              <div class="social-wrap-inner">
+                <a class="social-share" href="#"
+                  ><i class="fa fa-share-alt"></i
+                ></a>
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="details">
+            <h4>
+              <a href=" {% static 'team-details.html' %} ">Isaac Marfo</a>
+            </h4>
+            <span>Marketing Expert</span>
+          </div>
+        </div>
+      </div>
+      <div class="item">
+        <div class="single-team-inner">
+          <div class="thumb">
+            <img src=" {% static 'assets/img/team/5.png' %} " alt="img" />
+            <div class="social-wrap">
+              <div class="social-wrap-inner">
+                <a class="social-share" href="#"
+                  ><i class="fa fa-share-alt"></i
+                ></a>
+                <ul>
+                  <li>
+                    <a href="#"><i class="fa fa-facebook"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-twitter"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-pinterest"></i></a>
+                  </li>
+                  <li>
+                    <a href="#"><i class="fa fa-linkedin"></i></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="details">
+            <h4>
+              <a href=" {% static 'team-details.html' %} ">Walson Jordan</a>
+            </h4>
+            <span>Ui/Ux Expert</span>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- back to top area end -->
+  </div>
+</div>
+<!-- team area end -->
 
+<!--blog-area start-->
+<div class="blog-area pd-top-80 pd-bottom-90">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-xl-6 col-lg-7">
+        <div class="section-title text-center">
+          <h6 class="sub-title double-line">Latest News</h6>
+          <h2 class="title">Our Insights & Articles</h2>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-4">
+        <ul class="single-blog-list-wrap mb-5 mb-lg-0">
+          <li>
+            <div class="media single-blog-list-inner">
+              <div class="media-left date">
+                <span>JAN</span>
+                20
+              </div>
+              <div class="media-body details">
+                <ul class="blog-meta">
+                  <li><i class="fa fa-user"></i> BY ADMIN</li>
+                  <li><i class="fa fa-folder-open-o"></i> News</li>
+                </ul>
+                <h5>
+                  <a href=" {% static 'blog-details.html' %} "
+                    >MCFSP at KNUST has Presented Assistive Devices to Scholars
+                    with Impairment</a
+                  >
+                </h5>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="media single-blog-list-inner">
+              <div class="media-left date">
+                <span>FEB</span>
+                26
+              </div>
+              <div class="media-body details">
+                <ul class="blog-meta">
+                  <li><i class="fa fa-user"></i> BY ADMIN</li>
+                  <li><i class="fa fa-folder-open-o"></i> News</li>
+                </ul>
+                <h5>
+                  <a href=" {% static 'blog-details.html' %} "
+                    >Health Screening Programme for Mastercard Foundation
+                    Scholars at KNUST Organised</a
+                  >
+                </h5>
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="media single-blog-list-inner">
+              <div class="media-left date">
+                <span>JAN</span>
+                28
+              </div>
+              <div class="media-body details">
+                <ul class="blog-meta">
+                  <li><i class="fa fa-user"></i> BY ADMIN</li>
+                  <li><i class="fa fa-folder-open-o"></i> News</li>
+                </ul>
+                <h5>
+                  <a href=" {% static 'blog-details.html' %} "
+                    >Mastercard Foundation Scholars Commission a Six (6) Unit
+                    Classroom Block at Agona Wiamoase
+                  </a>
+                </h5>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-8">
+        <div class="row justify-content-center">
+          <div class="col-md-6">
+            <div class="single-blog-inner">
+              <div class="thumb">
+                <img
+                  src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2022-02/Mentors%20and%20Mentees%20Welcome%20Program.jpg"
+                  alt="img"
+                />
+                <span class="date">28 JANUARY, 2022</span>
+              </div>
+              <div class="details">
+                <ul class="blog-meta">
+                  <li><i class="fa fa-user"></i> BY ADMIN</li>
+                  <li><i class="fa fa-folder-open-o"></i> News</li>
+                </ul>
+                <h5>
+                  <a href=" {% static 'blog-details.html' %} "
+                    >WiSTEM-KNUST/MCFSP at KNUST Holds Mentors and Mentees
+                    Welcome Programme</a
+                  >
+                </h5>
+                <a
+                  class="read-more-text"
+                  href=" {% static 'blog-details.html' %} "
+                  >READ MORE <i class="fa fa-angle-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="single-blog-inner">
+              <div class="thumb">
+                <img
+                  src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-09/MCFSP%20at%20KNUST%20Equips%20Scholars%20with%20Hands-On%20Skills%20for%20the%20World%20of%20Work.jpg"
+                  alt="img"
+                />
+                <span class="date">30 JANUARY, 2022</span>
+              </div>
+              <div class="details">
+                <ul class="blog-meta">
+                  <li><i class="fa fa-user"></i> BY ADMIN</li>
+                  <li><i class="fa fa-folder-open-o"></i> News</li>
+                </ul>
+                <h5>
+                  <a href=" {% static 'blog-details.html' %} "
+                    >MCFSP at KNUST Equips Scholars with Hands-On Skills for the
+                    World of Work</a
+                  >
+                </h5>
+                <a
+                  class="read-more-text"
+                  href=" {% static 'blog-details.html' %} "
+                  >READ MORE <i class="fa fa-angle-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--blog-area end-->
 
-    <!-- all plugins here -->
-    <script src=" {% static 'assets/js/vendor.js' %} "></script>
-    <!-- main js  -->
-    <script src=" {% static 'assets/js/main.js' %} "></script>
-</body>
-
-</html>
+<!--contact-area start-->
+<div
+  class="contact-area bg-overlay mt-200 pd-bottom-90"
+  style="background-image: url(' {% static 'assets/img/banner/2.png' %} ')"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <form class="contact-form-inner mt-mn-200 style-shadow">
+          <div class="section-title">
+            <h2 class="title">Contact Us</h2>
+            <p>We will be happy to answer your questions.</p>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="single-input-inner">
+                <input type="text" placeholder="Full name" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="single-input-inner">
+                <input type="text" placeholder="Phone Number" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="single-input-inner">
+                <input type="text" placeholder="Email Address" />
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="single-input-inner">
+                <input type="text" placeholder="Subject" />
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="single-input-inner">
+                <textarea placeholder="Your Message"></textarea>
+              </div>
+            </div>
+            <div class="col-sm-6 align-self-center">
+              <div class="single-input-inner style-checkbox"></div>
+            </div>
+            <div class="col-sm-6 text-sm-right">
+              <a class="btn btn-base" href="#">Send Message</a>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-4 align-self-end">
+        <div class="mt-5 mt-lg-0">
+          <ul class="single-list-wrap">
+            <li class="single-list-inner style-white style-check-box-grid-2">
+              <div class="media">
+                <div class="media-left">
+                  <img
+                    src=" {% static 'assets/img/icon/16.png' %} "
+                    alt="img"
+                  />
+                </div>
+                <div class="media-body align-self-center">
+                  <h5>Our Address</h5>
+                  <p>J. Harper Centre Commercial Area</p>
+                  <p>KNUST</p>
+                </div>
+              </div>
+            </li>
+            <li class="single-list-inner style-white style-check-box-grid-2">
+              <div class="media">
+                <div class="media-left">
+                  <img
+                    src=" {% static 'assets/img/icon/17.png' %} "
+                    alt="img"
+                  />
+                </div>
+                <div class="media-body align-self-center">
+                  <h5>Our Phone</h5>
+                  <p>+233 3223 98766</p>
+                  <p>+233 206 030 790</p>
+                </div>
+              </div>
+            </li>
+            <li class="single-list-inner style-white style-check-box-grid-2">
+              <div class="media">
+                <div class="media-left">
+                  <img
+                    src=" {% static 'assets/img/icon/18.png' %} "
+                    alt="img"
+                  />
+                </div>
+                <div class="media-body align-self-center">
+                  <h5>Our Email</h5>
+                  <p>mcfsecretariat@knust.edu.gh</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!--contact-area end-->
+{% endblock content %}
