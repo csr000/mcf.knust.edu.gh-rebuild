@@ -78,7 +78,7 @@
           <div class="collapse navbar-collapse" id="edumint_main_menu">
             <ul class="navbar-nav menu-open">
               <li class="current-menu-item">
-                <a href="#">Home</a>
+                <a href="{% url 'index' %}">Home</a>
               </li>
               <li class="menu-item-has-children">
                 <a href="#">About Us</a>
@@ -99,18 +99,18 @@
               <li class="menu-item-has-children">
                 <a href="#">Scholars</a>
                 <ul class="sub-menu">
-                  <li><a href=" {% static 'blog.html' %} ">COHORT ONE</a></li>
-                  <li><a href=" {% static 'blog.html' %} ">COHORT TWO</a></li>
-                  <li><a href=" {% static 'blog.html' %} ">COHORT THREE</a></li>
-                  <li><a href=" {% static 'blog.html' %} ">COHORT FOUR</a></li>
-                  <li><a href=" {% static 'blog.html' %} ">COHORT FIVE</a></li>
+                  <li><a href=" {% url 'cohort' 1 %} ">COHORT ONE</a></li>
+                  <li><a href=" {% url 'cohort' 2 %} ">COHORT TWO</a></li>
+                  <li><a href=" {% url 'cohort' 3 %} ">COHORT THREE</a></li>
+                  <li><a href=" {% url 'cohort' 4 %} ">COHORT FOUR</a></li>
+                  <li><a href=" {% url 'cohort' 5 %} ">COHORT FIVE</a></li>
                 </ul>
               </li>
               <li class="menu-item-has-children">
                 <a href="#">More</a>
                 <ul class="sub-menu">
                   <li><a href=" {% url 'register' %} ">Register</a></li>
-                  <li><a href=" {% static 'staff' %} ">Staff</a></li>
+                  <li><a href=" {% url 'staff' %} ">Staff</a></li>
                   <li><a href=" {% url 'event' %} ">Events</a></li>
                   <li><a href=" {% url 'news' %} ">News</a></li>
                   <li>

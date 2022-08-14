@@ -1,23 +1,82 @@
-from bs4 import BeautifulSoup
-import requests, re
+# from bs4 import BeautifulSoup
+# import requests
 
-url = 'https://mcf.knust.edu.gh/index.php/staff'
+# url = 'https://mcf.knust.edu.gh/index.php/staff'
+
+# res = requests.get(url)
+# print(res.status_code)
+
+# soup = BeautifulSoup(res.content, 'html.parser')
+
+# res = soup.find_all("div", class_="col-sm-2")
+
+# lect_imgs = ["https://mcf.knust.edu.gh"+i.find("img").get('src') for i in res]
+# lect_name = [i.find("img").get('title') for i in res]
+# lect_role = [i.find("h5").text.strip() for i in res]
+
+# res = zip(lect_imgs, lect_name, lect_role)
+
+# new = ["""
+#         <div class="col-lg-4 col-md-6">
+#                     <div class="single-team-inner">
+#                         <div class="thumb">
+#                             <img src="{}" alt="img">
+#                         </div>
+#                         <div class="details">
+#                             <h4><a href="#">{}</a></h4>
+#                             <span>{}</span>
+#                         </div>
+#                     </div>
+#                 </div>
+#         """.format(_[0], _[1], _[2]).replace("\n", "") for _ in list(res)]
+
+
+# with open("dump.txt", 'w') as f:
+#     f.write(''.join(new))
+
+# ===============================================================================================================================
+# ===============================================================================================================================
+# ===============================================================================================================================
+
+from bs4 import BeautifulSoup
+import requests
+
+url = 'https://mcf.knust.edu.gh/index.php/scholars/cohort-five'
 
 res = requests.get(url)
 print(res.status_code)
 
 soup = BeautifulSoup(res.content, 'html.parser')
 
-res = soup.find_all("div", class_="col-sm-2")
-print(res[0].get('div'))
+res = soup.find_all("div", class_="featured-image")
 
-# https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-06/Ms%20Afia%20Ampomah%20Awuah.jpg
+lect_imgs = ["https://mcf.knust.edu.gh"+i.find("img").get('src') for i in res]
 
-# <div class="col-sm-2">
-# <div class="staff-img"> <img alt="" height="2170" src="/sites/mcf.knust.edu.gh/files/2021-06/Ms%20Afia%20Ampomah%20Awuah.jpg" title="Ms Afia Ampomah Awuah" typeof="Image" width="1800"/>
-# </div>
-# <div class="staff-name">
-# <a href="/index.php/staff/afia-ampomah-awuah"><h4><span>Ms</span> <span>Afia Ampomah Awuah</span></h4></a>
-# <h5>Program Manager</h5>
-# </div>
-# </div>
+res = soup.find_all("div", class_="profile-name")
+
+lect_role = [i.find("h5").text.strip() for i in res]
+lect_name = [i.find("h4").text.strip() for i in res]
+
+res = zip(lect_imgs, lect_name, lect_role)
+
+new = ["""
+        <div class="col-lg-4 col-md-6">
+                    <div class="single-team-inner">
+                        <div class="thumb">
+                            <img src="{}" alt="img">
+                        </div>
+                        <div class="details">
+                            <h4><a href="#">{}</a></h4>
+                            <span>{}</span>
+                        </div>
+                    </div>
+                </div>
+        """.format(_[0], _[1], _[2]).replace("\n", "") for _ in list(res)]
+
+
+with open("dump.txt", 'w') as f:
+    f.write(''.join(new))
+
+# ===============================================================================================================================
+# ===============================================================================================================================
+# ===============================================================================================================================

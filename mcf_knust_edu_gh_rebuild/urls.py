@@ -23,10 +23,12 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('about/', views.about, name='about'),
     path('register/', views.register, name='register'),
+    path('staff/', views.staff, name='staff'),
     path('event/', views.event, name='event'),
     path('news/', views.news, name='news'),
     path('announcements/', views.announcements, name='announcements'),
     path('publications/', views.publications, name='publications'),
     path('contact/', views.contact, name='contact'),
+    path('cohort/<str:id>', views.cohort, name='cohort'),
     path('admin/', admin.site.urls),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
