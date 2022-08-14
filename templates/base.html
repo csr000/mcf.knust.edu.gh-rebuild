@@ -1,166 +1,206 @@
 <!DOCTYPE html>
 <html lang="zxx">
-
-<head>
+  <head>
     {% load static %}
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Mastercard Foundation, KNUST</title>
-    <link rel=icon href=" {% static 'assets/img/favicon.png' %} " sizes="20x20" type="image/png">
+    <link
+      rel="icon"
+      href=" {% static 'assets/img/favicon.png' %} "
+      sizes="20x20"
+      type="image/png"
+    />
 
     <!-- Stylesheet -->
-    <link rel="stylesheet" href=" {% static 'assets/css/vendor.css' %} ">
-    <link rel="stylesheet" href=" {% static 'assets/css/style.css' %} ">
-    <link rel="stylesheet" href=" {% static 'assets/css/responsive.css' %} ">
+    <link rel="stylesheet" href=" {% static 'assets/css/vendor.css' %} " />
+    <link rel="stylesheet" href=" {% static 'assets/css/style.css' %} " />
+    <link rel="stylesheet" href=" {% static 'assets/css/responsive.css' %} " />
+  </head>
 
-</head>
-
-<body>
-
+  <body>
     <!-- preloader area start -->
     <div class="preloader" id="preloader">
-        <div class="preloader-inner">
-            <div class="spinner">
-                <div class="dot1"></div>
-                <div class="dot2"></div>
-            </div>
+      <div class="preloader-inner">
+        <div class="spinner">
+          <div class="dot1"></div>
+          <div class="dot2"></div>
         </div>
+      </div>
     </div>
     <!-- preloader area end -->
 
     <!-- search popup start-->
     <div class="td-search-popup" id="td-search-popup">
-        <form action="index.html" class="search-form">
-            <div class="form-group">
-                <input type="text" class="form-control" placeholder="Search.....">
-            </div>
-            <button type="submit" class="submit-btn"><i class="fa fa-search"></i></button>
-        </form>
+      <form action="index.html" class="search-form">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Search....." />
+        </div>
+        <button type="submit" class="submit-btn">
+          <i class="fa fa-search"></i>
+        </button>
+      </form>
     </div>
     <!-- search popup end-->
     <div class="body-overlay" id="body-overlay"></div>
 
     <!-- navbar start -->
     <div class="navbar-area">
+      <nav class="navbar navbar-area-1 navbar-area navbar-expand-lg">
+        <div class="container nav-container">
+          <div class="responsive-mobile-menu">
+            <button
+              class="menu toggle-btn d-block d-lg-none"
+              data-target="#edumint_main_menu"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="icon-left"></span>
+              <span class="icon-right"></span>
+            </button>
+          </div>
+          <div class="logo">
+            <a href=" {% static 'index.html' %} "
+              ><img
+                src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/inline-images/MCFSP-AT-KNUST-LOGO_0.png"
+                alt="img"
+            /></a>
+          </div>
+          <div class="nav-right-part nav-right-part-mobile">
+            <a class="signin-btn" href=" {% static 'signin.html' %} "
+              >Sign In</a
+            >
+            <a class="btn btn-base" href=" {% static 'signup.html' %} "></a>
+            <a class="search-bar" href="#"><i class="fa fa-search"></i></a>
+          </div>
+          <div class="collapse navbar-collapse" id="edumint_main_menu">
+            <ul class="navbar-nav menu-open">
+              <li class="current-menu-item">
+                <a href="#">Home</a>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">About Us</a>
+                <ul class="sub-menu">
+                  <li><a href="{% url 'about' %}">History</a></li>
+                  <li>
+                    <a href="{% url 'about' %}">Vision & Mission of MCF</a>
+                  </li>
+                  <li>
+                    <a href="{% url 'about' %}"
+                      >Vision, Mission & Core Values of KNUST</a
+                    >
+                  </li>
+                  <li><a href="{% url 'about' %}">Counselling Unit</a></li>
+                </ul>
+              </li>
 
-        <nav class="navbar navbar-area-1 navbar-area navbar-expand-lg">
-            <div class="container nav-container">
-                <div class="responsive-mobile-menu">
-                    <button class="menu toggle-btn d-block d-lg-none" data-target="#edumint_main_menu"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="icon-left"></span>
-                        <span class="icon-right"></span>
-                    </button>
-                </div>
-                <div class="logo">
-                    <a href=" {% static 'index.html' %} "><img
-                            src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/inline-images/MCFSP-AT-KNUST-LOGO_0.png"
-                            alt="img"></a>
-                </div>
-                <div class="nav-right-part nav-right-part-mobile">
-                    <a class="signin-btn" href=" {% static 'signin.html' %} ">Sign In</a>
-                    <a class="btn btn-base" href=" {% static 'signup.html' %} "></a>
-                    <a class="search-bar" href="#"><i class="fa fa-search"></i></a>
-                </div>
-                <div class="collapse navbar-collapse" id="edumint_main_menu">
-                    <ul class="navbar-nav menu-open">
-                        <li class="current-menu-item">
-                            <a href="#">Home</a>
-
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#">About Us</a>
-                            <ul class="sub-menu">
-                                <li><a href="{% url 'about' %}">History</a></li>
-                                <li><a href="{% url 'about' %}">Vision & Mission of MCF</a></li>
-                                <li><a href="{% url 'about' %}">Vision, Mission & Core Values of KNUST</a></li>
-                                <li><a href="{% url 'about' %}">Counselling Unit</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="menu-item-has-children">
-                            <a href="#">Scholars</a>
-                            <ul class="sub-menu">
-                                <li><a href=" {% static 'blog.html' %} ">COHORT ONE</a></li>
-                                <li><a href=" {% static 'blog.html' %} ">COHORT TWO</a></li>
-                                <li><a href=" {% static 'blog.html' %} ">COHORT THREE</a></li>
-                                <li><a href=" {% static 'blog.html' %} ">COHORT FOUR</a></li>
-                                <li><a href=" {% static 'blog.html' %} ">COHORT FIVE</a></li>
-             
-                            </ul>
-                        </li>
-                        <li class="menu-item-has-children">
-                            <a href="#">More</a>
-                            <ul class="sub-menu">
-                                <li><a href=" {% url 'register' %} ">Register</a></li>
-                                <li><a href=" {% static 'staff.html' %} ">Staff</a></li>
-                                <li><a href=" {% static 'event.html' %} ">Events</a></li>
-                                <li><a href=" {% static 'news.html' %} ">News</a></li>
-                                <li><a href=" {% static 'announcements.html' %} ">Announcement</a></li>
-                                <li><a href=" {% static 'publications.html' %} ">publications</a></li>
-                                <li><a href=" {% static 'contact.html' %} ">Contact Us</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-                <div class="nav-right-part nav-right-part-desktop">
-                    <!-- <a class="signin-btn" href=" {% static 'signin.html' %} ">Sign In</a> -->
-                    <a class="btn btn-base" href=" {% static 'signup.html' %} ">Apply for Scholarship</a>
-                    <a class="search-bar" href="#"><i class="fa fa-search"></i></a>
-                </div>
-            </div>
-        </nav>
+              <li class="menu-item-has-children">
+                <a href="#">Scholars</a>
+                <ul class="sub-menu">
+                  <li><a href=" {% static 'blog.html' %} ">COHORT ONE</a></li>
+                  <li><a href=" {% static 'blog.html' %} ">COHORT TWO</a></li>
+                  <li><a href=" {% static 'blog.html' %} ">COHORT THREE</a></li>
+                  <li><a href=" {% static 'blog.html' %} ">COHORT FOUR</a></li>
+                  <li><a href=" {% static 'blog.html' %} ">COHORT FIVE</a></li>
+                </ul>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">More</a>
+                <ul class="sub-menu">
+                  <li><a href=" {% url 'register' %} ">Register</a></li>
+                  <li><a href=" {% static 'staff' %} ">Staff</a></li>
+                  <li><a href=" {% url 'event' %} ">Events</a></li>
+                  <li><a href=" {% url 'news' %} ">News</a></li>
+                  <li>
+                    <a href=" {% url 'announcements' %} ">Announcement</a>
+                  </li>
+                  <li><a href=" {% url 'publications' %} ">publications</a></li>
+                  <li><a href=" {% url 'contact' %} ">Contact Us</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="nav-right-part nav-right-part-desktop">
+            <!-- <a class="signin-btn" href=" {% static 'signin.html' %} ">Sign In</a> -->
+            <a class="btn btn-base" href=" {% static 'signup.html' %} "
+              >Apply for Scholarship</a
+            >
+            <a class="search-bar" href="#"><i class="fa fa-search"></i></a>
+          </div>
+        </div>
+      </nav>
     </div>
     <!-- navbar end -->
 
-    {% block content %}
-    {% endblock content %}
+    {% block content %} {% endblock content %}
 
     <!-- footer area start -->
     <footer class="footer-area bg-gray">
-
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 align-self-center">
-                        <a href=" {% static 'index.html' %} "><img
-                                src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/inline-images/MCFSP-AT-KNUST-LOGO_0.png"
-                                class="footer-logo" alt="img"></a>
-                    </div>
-                    <div class="col-lg-4  col-md-6 order-lg-12 text-md-right align-self-center">
-                        <ul class="social-media mt-md-0 mt-3">
-                            <li><a class="facebook" href="https://www.facebook.com/mcfspatknust"><i
-                                        class="fa fa-facebook"></i></a></li>
-                            <li><a class="twitter" href="https://twitter.com/mcfspatknust"><i
-                                        class="fa fa-twitter"></i></a></li>
-                            <li><a class="instagram" href="https://www.instagram.com/mcfspatknust/"><i
-                                        class="fa fa-instagram"></i></a></li>
-                            <li><a class="youtube" href="https://youtube.com/channel/UCK2hx6d86sS56_ItMiTt2QA"><i
-                                        class="fa fa-youtube"></i></a></li>
-                        </ul>
-                    </div>
-                    <div class="col-lg-4 order-lg-8 text-lg-center align-self-center mt-lg-0 mt-3">
-                        <p>copyright 2022 by Richard Stephen</p>
-                    </div>
-                </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-4 col-md-6 align-self-center">
+              <a href=" {% static 'index.html' %} "
+                ><img
+                  src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/inline-images/MCFSP-AT-KNUST-LOGO_0.png"
+                  class="footer-logo"
+                  alt="img"
+              /></a>
             </div>
+            <div
+              class="col-lg-4 col-md-6 order-lg-12 text-md-right align-self-center"
+            >
+              <ul class="social-media mt-md-0 mt-3">
+                <li>
+                  <a
+                    class="facebook"
+                    href="https://www.facebook.com/mcfspatknust"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a class="twitter" href="https://twitter.com/mcfspatknust"
+                    ><i class="fa fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    class="instagram"
+                    href="https://www.instagram.com/mcfspatknust/"
+                    ><i class="fa fa-instagram"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    class="youtube"
+                    href="https://youtube.com/channel/UCK2hx6d86sS56_ItMiTt2QA"
+                    ><i class="fa fa-youtube"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+            <div
+              class="col-lg-4 order-lg-8 text-lg-center align-self-center mt-lg-0 mt-3"
+            >
+              <p>copyright 2022 by Richard Stephen</p>
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
     <!-- footer area end -->
 
     <!-- back to top area start -->
     <div class="back-to-top">
-        <span class="back-top"><i class="fa fa-angle-up"></i></span>
+      <span class="back-top"><i class="fa fa-angle-up"></i></span>
     </div>
     <!-- back to top area end -->
-
 
     <!-- all plugins here -->
     <script src=" {% static 'assets/js/vendor.js' %} "></script>
     <!-- main js  -->
     <script src=" {% static 'assets/js/main.js' %} "></script>
-</body>
-
+  </body>
 </html>
