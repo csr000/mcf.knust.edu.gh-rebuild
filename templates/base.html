@@ -64,7 +64,7 @@
           <div class="logo">
             <a href=" {% static 'index.html' %} "
               ><img
-                src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/inline-images/MCFSP-AT-KNUST-LOGO_0.png"
+                src="http://127.0.0.1:8000/media/MCFSP-AT-KNUST-LOGO_0.png"
                 alt="img"
             /></a>
           </div>
@@ -144,7 +144,7 @@
             <div class="col-lg-4 col-md-6 align-self-center">
               <a href=" {% static 'index.html' %} "
                 ><img
-                  src="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/inline-images/MCFSP-AT-KNUST-LOGO_0.png"
+                  src="http://127.0.0.1:8000/media/MCFSP-AT-KNUST-LOGO_0.png"
                   class="footer-logo"
                   alt="img"
               /></a>
@@ -154,28 +154,22 @@
             >
               <ul class="social-media mt-md-0 mt-3">
                 <li>
-                  <a
-                    class="facebook"
-                    href="https://www.facebook.com/mcfspatknust"
+                  <a class="facebook" href="{{ socials.facebook }}"
                     ><i class="fa fa-facebook"></i
                   ></a>
                 </li>
                 <li>
-                  <a class="twitter" href="https://twitter.com/mcfspatknust"
+                  <a class="twitter" href="{{ socials.twitter }}"
                     ><i class="fa fa-twitter"></i
                   ></a>
                 </li>
                 <li>
-                  <a
-                    class="instagram"
-                    href="https://www.instagram.com/mcfspatknust/"
+                  <a class="instagram" href="{{ socials.instagram }}"
                     ><i class="fa fa-instagram"></i
                   ></a>
                 </li>
                 <li>
-                  <a
-                    class="youtube"
-                    href="https://youtube.com/channel/UCK2hx6d86sS56_ItMiTt2QA"
+                  <a class="youtube" href="{{ socials.youtube }}"
                     ><i class="fa fa-youtube"></i
                   ></a>
                 </li>
@@ -184,7 +178,7 @@
             <div
               class="col-lg-4 order-lg-8 text-lg-center align-self-center mt-lg-0 mt-3"
             >
-              <p>copyright 2022 by Richard Stephen</p>
+              <p>{{ data.copyright }}</p>
             </div>
           </div>
         </div>

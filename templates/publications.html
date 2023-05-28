@@ -1,20 +1,5 @@
 {% extends 'base.html' %} {% block content %} {% load static %}
 
-<!-- breadcrumb start -->
-<!-- <div
-      class="breadcrumb-area bg-overlay"
-      style="background-image: url(' {% static 'assets/img/bg/3.png' %} ')"
-    >
-      <div class="container">
-        <div class="breadcrumb-inner">
-          <div class="section-title mb-0 text-center">
-            <h2 class="page-title">Publications</h2>
-          </div>
-        </div>
-      </div>
-    </div> -->
-<!-- breadcrumb end -->
-
 <!-- blog area start -->
 <div class="blog-area pd-top-120 pd-bottom-120">
   <div class="container">
@@ -22,40 +7,11 @@
       <div class="col-lg-9">
         <div class="blog-details-page-content">
           <ul>
+            {% for i in data %}
             <li>
-              <a
-                href="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2019-03/THE%20DREAMS%20ONLINE%20COPY_0.pdf"
-                ><strong
-                  >The Dreams, Inspiring the Transformational Agenda</strong
-                ></a
-              >
+              <a href="{{ i.url_to_file }}"><strong>{{ i.title }}</strong></a>
             </li>
-            <li>
-              <a
-                href="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2019-03/EXPERIENCES%20AT%20MCFSP%20AT%20KNUST_0.pdf"
-                ><strong>Experiences, Lessons and Observations</strong></a
-              >
-            </li>
-            <li>
-              <a
-                href="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2021-12/Scholars%27%20Guide%20-%20Revised%202021.pdf"
-                ><strong>MCFSP at KNUST Scholars’ Guide</strong></a
-              >
-            </li>
-            <li>
-              <strong
-                ><a
-                  href="https://www.knust.edu.gh/students/knust-students-guide"
-                  >KNUST Students’ Guide</a
-                ></strong
-              >
-            </li>
-            <li>
-              <a
-                href="https://mcf.knust.edu.gh/sites/mcf.knust.edu.gh/files/2020-09/TUTORIALS%20FOR%20ONLINE%20INTERVIEW%20TOOLS.pdf"
-                ><strong>Tutorials for Online Interview Tools</strong></a
-              >
-            </li>
+            {% endfor %}
           </ul>
 
           <div class="files-container"></div>
